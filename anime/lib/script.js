@@ -1,14 +1,12 @@
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    // Reduced motion preference is enabled, so disable the animation
     anime({
       targets: 'h1',
       translateY: 0,
       translateX: 0,
-      duration: 0, // Set duration to 0 to instantly go to the final state
+      duration: 0,
       loop: false
     });
   } else {
-    // Reduced motion preference is not enabled, so enable the animation
     anime({
       targets: 'h1',
       keyframes: [
@@ -24,3 +22,15 @@ if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     });
   }
 console.log("JavaScript code is running");
+
+// const imageElements = document.querySelectorAll('.hover-effect');
+
+//     imageElements.forEach(image => {
+//       image.addEventListener('mouseenter', () => {
+//         image.style.opacity = '0.2'; 
+//       });
+
+//       image.addEventListener('mouseleave', () => {
+//         image.style.opacity = '1';
+//       });
+//     });
